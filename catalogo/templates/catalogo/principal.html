@@ -5,10 +5,10 @@
         <ul>
             {% for libro in libros %}
                 <li><a href="{% url 'detalle_libro' pk=libro.pk %}">
-                    {{forloop.counter}} - {{libro.titulo}} - ({% for participacion in libro.participaciones.all %}
-                    {{ participacion.autor.nombre }} {{ participacion.autor.apellidos }}{% if not forloop.last %}, {% endif %}
+                    {{forloop.counter}} - {{libro.titulo}}</a> - ({% for participacion in libro.participaciones.all %}
+                    <a href="{% url 'autor' pk=participacion.autor.pk %}">{{ participacion.autor.nombre }} {{ participacion.autor.apellidos }}</a>{% if not forloop.last %}, {% endif %}
                     {% endfor %})
-                </a></li>
+                </li>
             {% empty %}
                 <li>No tiene libros</li>
             {% endfor %}

@@ -10,8 +10,8 @@
     {% else %}
         <p>El libro aun no esta diponible</p>
     {% endif %}
-    <p>Genero:{{libro.genero}}</p>
-    <p>Año de publicación: {{libro.anio_publicacion}}</p>
+    <p>Genero:{{libro.get_genero_display}}</p>
+    <p>fecha de publicacion: {{libro.fecha_publicacion}}</p>
 
     <a href="{% url 'principal' %}">Volver</a>
 {% endblock %}
