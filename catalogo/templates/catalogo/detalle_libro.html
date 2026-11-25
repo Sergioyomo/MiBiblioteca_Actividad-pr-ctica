@@ -1,5 +1,5 @@
 {% extends 'catalogo/base.html' %}
-{% block titulo %}{{libro.titulo}} ({{libro.autores.nombre}}){% endblock %}
+{% block titulo %}{{libro.titulo}} ({{libro.participaciones.autor.nombre}}){% endblock %}
 
 {% block contenido %}
     {% if libro.disponible %}
