@@ -5,7 +5,7 @@
         <ul>
             {% for libro in libros %}
                 <li><a href="{% url 'detalle_libro' pk=libro.pk %}">
-                    {{forloop.counter}} - {{libro.titulo}}</a></li>
+                    {{forloop.counter}} - {{libro.titulo}} - {{libro.autores.nombre}}</a></li>
             {% empty %}
                 <li>No tiene libros</li>
             {% endfor %}
