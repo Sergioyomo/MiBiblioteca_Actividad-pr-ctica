@@ -1,5 +1,5 @@
 from django.shortcuts import get_object_or_404, render
-from .models import Libro
+from .models import Libro, Autor
 
 # Create your views here.
 def principal (request):
