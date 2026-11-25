@@ -9,3 +9,7 @@ def principal (request):
 def detalle_libro (request, pk):
     context = get_object_or_404(Libro, pk=pk)
     return render(request,'catalogo/detalle_libro.html', {'libro':context})
+
+def autor(request, pk):
+    autor= get_object_or_404(Autor, pk=pk)
+    return render(request, 'catalogo/autor.html', {'autor':autor})

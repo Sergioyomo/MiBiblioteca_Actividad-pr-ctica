@@ -1,0 +1,14 @@
+{% extends 'catalogo/base.html' %}
+{% block titulo %}{{libro.titulo}} ({{libro.autor}}){% endblock %}
+
+{% block contenido %}
+    {% if libro.disponible %}
+        <p class="disponible">El libro está disponible.</p>
+    {% else %}
+        <p>El libro aun no esta diponible</p>
+    {% endif %}
+    <p>Genero:{{libro.genero}}</p>
+    <p>Año de publicación: {{libro.anio_publicacion}}</p>
+
+    <a href="{% url 'principal' %}">Volver</a>
+{% endblock %}
